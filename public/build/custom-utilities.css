@@ -6,3 +6,9 @@
 .hover\:grow:hover {
     transform: scale(1.02);
 }
+
+
+html{
+    scroll-behavior: smooth;
+}
+
