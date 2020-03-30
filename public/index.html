@@ -8,24 +8,25 @@
   <link rel="stylesheet" href="/build/custom-utilities.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
-<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png" />
   <link rel="shortcut icon" type="image/x-icon" src="images/favicon.ico">
   <link rel='shortcut icon' href='images/favicon.ico' type='image/x-icon' />
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v1.9.8/dist/alpine.js" defer></script>
-  
+
+
   <title>Daniel Sanabria | UI Designer & Desarrollador Front-End</title>
 </head>
 
-<body class="w-full"> 
-  <header class=" bg-yellow-500 bg-white shadow-md">
-    <nav class="px-4 flex justify-between py-4">
+<body class="w-full">
+  <!--Cabecera amarilla con el menú-->
+  <header class="px-6 bg-yellow-500 bg-white shadow-md lg:pl-64">
+    <nav class="flex justify-between py-4">
       <ul class="flex">
-        <li class=" px-4 text-2xl font-bold text-gray-800"><a href="#">Daniel Sanabria</a></li>
+        <li class="text-2xl font-bold text-gray-800"><a href="#">Daniel Sanabria</a></li>
       </ul>
-      <div class="relative" x-data="{ isOpen: false }">
-        <button @click="isOpen = !isOpen" class="flex items-center focus:outline-none hover:text-white"
-          @keydown.escape="isOpen = false">
-          <img class="hover:text-white" src="Images/menu.svg" width="24" height="24px" alt="">
+      <div class="relative" x-data="{ isOpen: false }" @click.away="isOpen = false">
+        <button @click="isOpen = !isOpen" class="flex items-center focus:outline-none" @keydown.escape="isOpen = false">
+          <div id="menuButton" class="bodymovinanim py-2 pr-2"></div>
         </button>
         <ul x-show="isOpen" @click.away="isOpen = false"
           class="absolute font-normal bg-gray-100 shadow overflow-hidden rounded-sm w-48  mt-2 py-1 right-0 z-10">
@@ -51,305 +52,67 @@
       </div>
     </nav>
   </header>
+  <!--Banner de la home con descripción y CTA-->
+  <div class="grid grid-cols-6 ">
+    <div class=" xl:py-auto px-6 lg:pl-64 col-span-6 md:col-span-4 bg-blue-500 justify-center lg:pt-12 md:pt-20 xl:pt-40">
+      <h2 class="text-white text-5xl md:text-4xl font-bold text-left md:text-left xl:text-6xl">
+        Me has encontrado!
+      </h2>
+      <h3 class="text-white text-2xl text-left md:text-left xl:text-4xl">
+        Si quieres saber más de mi..
+      </h3>
+      <h3 class="text-white text-xl text-left md:text-left opacity-50">
+        Soy UI/ UX & Front end Developer
+      </h4>
+      <div class="text-left">
+      <button class="py-8 mx-auto">
+        <a href="#sobre-mi"
+        class="p-6 bg-yellow-500 text-gray-800 font-semibold hover:text-white shadow-lg tracking-wider px-4 py-3 rounded-md hover:grow">Descubre
+        más</a>
+        </div>
+      </button>
+    </div>
+    <div class="col-span-6 md:col-span-2 h-10 h-auto xs:w-64">
+      <img class="xs:w-1/2 align-baseline items-baseline" src="/Images/Avatar-Dani-02-01.svg" alt="">
+    </div>
+  </div>
+  <!--Sección de proyectos-->
   <section>
-    <div class="flex items-center bg-blue-500">
-      <div class="flex-row bg-blue-500 h-full px-8 py-2 w-full lg:w-2/3 lg:mx-auto wow fadeInLeft">
-        <h1 class="text-white text-4xl font-bold lg:text-6xl">Me has encontrado!</h1>
-        <h2 class="text-white text-2xl lg:text-4xl">Si quieres saber más sobre mi..</h2>
-        <h3 class="text-white text-xl opacity-50 py-4">Soy UI/ UX & Front end Developer</h3>
-        <div class="py-4 mx-auto">
-          <a href="#sobre-mi"
-            class="p-6  bg-yellow-500 text-gray-800 font-semibold hover:text-white shadow-lg tracking-wider px-4 py-3 rounded-md hover:grow">Descubre
-            más</a>
+    <div id="proyectos" class="xl:px-64 py-8">
+      <a class="pl-8 py-8 font-bold text-4xl text-gray-800 xl:px-0" href="#gardenweb">Proyectos</a>
+      <div id="proyecto" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 center ">
+        <div class="px-6 py-6 font-bold text-gray-800 text-xl">
+          <a href="#gardenweb"><img class="mx-auto hover:grow hover:shadow-lg rounded" src="/Images/logo-garden-web.png">
+          <p class="px-2 py-4 m-0 text-center sm:text-left font-bold text-gray-800 text-xl">Gardenweb</p></a>
         </div>
-      </div>
-      <div class="flex-row w-1/3 wow fadeInRight">
-        <svg class="md:flex-row hidden md:block" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0"
-          y="0" viewBox="0 0 217 237" xml:space="preserve" enable-background="new 0 0 217 237">
-          <style>
-            .st0 {
-              fill-rule: evenodd;
-              clip-rule: evenodd;
-              fill: #fff
-            }
+        <div class="px-6 py-6 ">
+          <a href="#jardisan"><img class="mx-auto hover:grow hover:shadow-lg rounded" src="/Images/logo-jardisan.png">
+         <p class="px-2 py-4 m-0 text-center sm:text-left font-bold text-gray-800 text-xl">Jardisan</p></a>
 
-            .st1 {
-              fill: #3e92cc
-            }
-
-            .st1,
-            .st27,
-            .st29 {
-              fill-rule: evenodd;
-              clip-rule: evenodd
-            }
-
-            .st27 {
-              fill: #ff4f6d
-            }
-
-            .st29 {
-              fill-opacity: .6
-            }
-          </style>
-          <path class="st0" d="M-7.9-11.8h236.3v262.2H-7.9z" />
-          <g id="Circle-Background">
-            <circle id="path-1_1_" class="st1" cx="109" cy="141.4" r="95.3" />
-          </g>
-          <defs>
-            <filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="13.7" y="46.2" width="190.9"
-              height="190.5">
-              <feColorMatrix values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" />
-            </filter>
-          </defs>
-          <mask maskUnits="userSpaceOnUse" x="13.7" y="46.2" width="190.9" height="190.5" id="mask-2_1_">
-            <g filter="url(#Adobe_OpacityMaskFilter)">
-              <circle id="path-1_2_" class="st0" cx="109" cy="141.4" r="95.3" />
-            </g>
-          </mask>
-          <g id="_xD83D__xDD8D_-Circle-Color" mask="url(#mask-2_1_)">
-            <path id="_xD83D__xDD8D_Color" class="st1" d="M13.7 46.2h190.9v190.5H13.7z" />
-          </g>
-          <g id="Body" transform="translate(28.8 32.4)">
-            <path id="path-5_1_"
-              d="M80.2 10.6c24.6 0 44.5 19.9 44.5 44.5V60c4.5.8 7.9 4.7 7.9 9.4v11.1c0 4.8-3.6 8.8-8.2 9.4-1.6 15.7-11.5 29-25.2 35.5V140h3.2c31.6 0 57.2 25.6 57.2 57.2v7.1H.8v-7.1C.8 165.6 26.4 140 58 140h3.2v-14.6c-13.7-6.5-23.5-19.8-25.2-35.5-4.6-.7-8.2-4.6-8.2-9.4V69.4c0-4.7 3.4-8.6 7.9-9.4v-4.9c0-24.6 19.9-44.5 44.5-44.5z"
-              fill-rule="evenodd" clip-rule="evenodd" fill="#d0c6ac" />
-            <defs>
-              <filter id="Adobe_OpacityMaskFilter_1_" filterUnits="userSpaceOnUse" x="-24.6" y="10.6" width="210.3"
-                height="194.4">
-                <feColorMatrix values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" />
-              </filter>
-            </defs>
-            <mask maskUnits="userSpaceOnUse" x="-24.6" y="10.6" width="210.3" height="194.4" id="mask-6_1_">
-              <g filter="url(#Adobe_OpacityMaskFilter_1_)">
-                <path id="path-5_2_" class="st0"
-                  d="M80.2 10.6c24.6 0 44.5 19.9 44.5 44.5V60c4.5.8 7.9 4.7 7.9 9.4v11.1c0 4.8-3.6 8.8-8.2 9.4-1.6 15.7-11.5 29-25.2 35.5V140h3.2c31.6 0 57.2 25.6 57.2 57.2v7.1H.8v-7.1C.8 165.6 26.4 140 58 140h3.2v-14.6c-13.7-6.5-23.5-19.8-25.2-35.5-4.6-.7-8.2-4.6-8.2-9.4V69.4c0-4.7 3.4-8.6 7.9-9.4v-4.9c0-24.6 19.9-44.5 44.5-44.5z" />
-              </g>
-            </mask>
-            <g id="Skin_x2F__xD83D__xDC76__xD83C__xDFFB_-05-Pale" mask="url(#mask-6_1_)">
-              <path fill-rule="evenodd" clip-rule="evenodd" fill="#ffdbb4" d="M4.2 10.6h210.3V205H4.2z"
-                transform="translate(-28.8)" id="Color" />
-            </g>
-            <defs>
-              <filter id="Adobe_OpacityMaskFilter_2_" filterUnits="userSpaceOnUse" x="35.7" y="85.2" width="88.9"
-                height="50.8">
-                <feColorMatrix values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" />
-              </filter>
-            </defs>
-            <mask maskUnits="userSpaceOnUse" x="35.7" y="85.2" width="88.9" height="50.8" id="mask-6_2_">
-              <g filter="url(#Adobe_OpacityMaskFilter_2_)">
-                <path id="path-5_3_" class="st0"
-                  d="M80.2 10.6c24.6 0 44.5 19.9 44.5 44.5V60c4.5.8 7.9 4.7 7.9 9.4v11.1c0 4.8-3.6 8.8-8.2 9.4-1.6 15.7-11.5 29-25.2 35.5V140h3.2c31.6 0 57.2 25.6 57.2 57.2v7.1H.8v-7.1C.8 165.6 26.4 140 58 140h3.2v-14.6c-13.7-6.5-23.5-19.8-25.2-35.5-4.6-.7-8.2-4.6-8.2-9.4V69.4c0-4.7 3.4-8.6 7.9-9.4v-4.9c0-24.6 19.9-44.5 44.5-44.5z" />
-              </g>
-            </mask>
-            <path id="Neck-Shadow"
-              d="M35.7 85.2c0 24.6 19.9 44.5 44.5 44.5s44.5-19.9 44.5-44.5v6.4c0 24.6-19.9 44.5-44.5 44.5s-44.5-19.9-44.5-44.5v-6.4z"
-              mask="url(#mask-6_2_)" fill-rule="evenodd" clip-rule="evenodd" fill-opacity=".1" />
-          </g>
-          <g transform="translate(43 15)">
-            <g id="Short-Hair">
-              <path id="path-13_1_"
-                d="M103.3 31.1c-2.2-2.2-4.7-4.1-7.2-6-.5-.4-1.1-.8-1.6-1.3-.1-.1-1.4-1-1.5-1.3-.4-.8-.2-.2-.1-1.1.1-1.2 2.5-4.5.7-5.3-.8-.3-2.2.6-3 .9-1.5.6-3 1.1-4.5 1.5.7-1.5 2.2-4.4-.5-3.6-2.1.6-4 2.2-6.1 2.9.7-1.1 3.4-4.6 1-4.8-.8-.1-3 1.4-3.9 1.7-2.5.9-5 1.5-7.6 2-8.9 1.6-19.3 1.1-27.5 5.2-6.3 3.1-12.6 8-16.3 14.1-3.5 5.9-4.9 12.4-5.6 19.3-.5 5-.6 10.2-.3 15.2.1 1.6.3 9.2 2.7 6.9 1.2-1.1 1.2-5.8 1.5-7.3.6-3.1 1.2-6.2 2.2-9.2 1.8-5.3 3.8-7.8 8.2-11.4 2.8-2.3 4.8-5.5 7.4-7.9 1.2-1.1.3-1 2.2-.8 1.3.1 2.6.1 3.9.2 3 .1 6 .1 9 .1 6.1 0 12.1.1 18.2-.2 2.7-.1 5.4-.2 8.1-.5 1.5-.1 4.2-1.1 5.4-.4 1.1.7 2.3 2.9 3.1 3.8 1.9 2.1 4.2 3.8 6.5 5.5 4.7 3.6 7 5 8.5 10.7 1.4 5.7 1 10.9 2.8 16.5.3 1 1.1 2.7 2.1 1.2.2-.3.1-1.8.1-2.7 0-3.6.9-6.3.9-9.9-.2-11.3-.6-25.6-8.8-34z"
-                fill-rule="evenodd" clip-rule="evenodd" fill="#1f3140" />
-            </g>
-            <defs>
-              <filter id="Adobe_OpacityMaskFilter_3_" filterUnits="userSpaceOnUse" x="-38.9" y="-.6" width="210.9"
-                height="222.7">
-                <feColorMatrix values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" />
-              </filter>
-            </defs>
-            <mask maskUnits="userSpaceOnUse" x="-38.9" y="-.6" width="210.9" height="222.7" id="mask-14_1_">
-              <g filter="url(#Adobe_OpacityMaskFilter_3_)">
-                <path id="path-13_2_" class="st0"
-                  d="M103.3 31.1c-2.2-2.2-4.7-4.1-7.2-6-.5-.4-1.1-.8-1.6-1.3-.1-.1-1.4-1-1.5-1.3-.4-.8-.2-.2-.1-1.1.1-1.2 2.5-4.5.7-5.3-.8-.3-2.2.6-3 .9-1.5.6-3 1.1-4.5 1.5.7-1.5 2.2-4.4-.5-3.6-2.1.6-4 2.2-6.1 2.9.7-1.1 3.4-4.6 1-4.8-.8-.1-3 1.4-3.9 1.7-2.5.9-5 1.5-7.6 2-8.9 1.6-19.3 1.1-27.5 5.2-6.3 3.1-12.6 8-16.3 14.1-3.5 5.9-4.9 12.4-5.6 19.3-.5 5-.6 10.2-.3 15.2.1 1.6.3 9.2 2.7 6.9 1.2-1.1 1.2-5.8 1.5-7.3.6-3.1 1.2-6.2 2.2-9.2 1.8-5.3 3.8-7.8 8.2-11.4 2.8-2.3 4.8-5.5 7.4-7.9 1.2-1.1.3-1 2.2-.8 1.3.1 2.6.1 3.9.2 3 .1 6 .1 9 .1 6.1 0 12.1.1 18.2-.2 2.7-.1 5.4-.2 8.1-.5 1.5-.1 4.2-1.1 5.4-.4 1.1.7 2.3 2.9 3.1 3.8 1.9 2.1 4.2 3.8 6.5 5.5 4.7 3.6 7 5 8.5 10.7 1.4 5.7 1 10.9 2.8 16.5.3 1 1.1 2.7 2.1 1.2.2-.3.1-1.8.1-2.7 0-3.6.9-6.3.9-9.9-.2-11.3-.6-25.6-8.8-34z" />
-              </g>
-            </mask>
-            <g id="Color_x2F_Hair_x2F_Brown-Dark" mask="url(#mask-14_1_)">
-              <path fill-rule="evenodd" clip-rule="evenodd" fill="#4a312c" d="M4.2 14.4h210.9v222.7H4.2z"
-                transform="translate(-43.1 -15)" id="Color_1_" />
-            </g>
-          </g>
-          <g id="Clothing_x2F_Hoodie" transform="translate(0 153)">
-            <g id="Hoodie">
-              <path id="path-7_1_"
-                d="M128 6.8c14.4 1.6 25.4 6 25.4 17.5V24c20.5 8.7 34.9 29 34.9 52.7v7.1H29.6v-7.1C29.6 53 44 32.7 64.5 24c.2-11.3 11.2-15.6 25.4-17.2v15c0 10.5 8.5 19.1 19.1 19.1s19-8.6 19-19.1v-15z"
-                fill-rule="evenodd" clip-rule="evenodd" fill="#b7c1db" />
-            </g>
-            <defs>
-              <filter id="Adobe_OpacityMaskFilter_4_" filterUnits="userSpaceOnUse" x="4.2" y="-3.6" width="210.4"
-                height="87.3">
-                <feColorMatrix values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" />
-              </filter>
-            </defs>
-            <mask maskUnits="userSpaceOnUse" x="4.2" y="-3.6" width="210.4" height="87.3" id="mask-8_1_">
-              <g filter="url(#Adobe_OpacityMaskFilter_4_)">
-                <path id="path-7_2_" class="st0"
-                  d="M128 6.8c14.4 1.6 25.4 6 25.4 17.5V24c20.5 8.7 34.9 29 34.9 52.7v7.1H29.6v-7.1C29.6 53 44 32.7 64.5 24c.2-11.3 11.2-15.6 25.4-17.2v15c0 10.5 8.5 19.1 19.1 19.1s19-8.6 19-19.1v-15z" />
-              </g>
-            </mask>
-            <g id="Color_x2F_Palette_x2F_Slate" mask="url(#mask-8_1_)">
-              <path id="_xD83D__xDD8D_Color_1_" fill-rule="evenodd" clip-rule="evenodd" fill="#293347"
-                d="M4.2-3.6h210.4v87.3H4.2z" />
-            </g>
-            <defs>
-              <filter id="Adobe_OpacityMaskFilter_5_" filterUnits="userSpaceOnUse" x="79.6" y="42.6" width="58.8"
-                height="45.9">
-                <feColorMatrix values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" />
-              </filter>
-            </defs>
-            <mask maskUnits="userSpaceOnUse" x="79.6" y="42.6" width="58.8" height="45.9" id="mask-8_2_">
-              <g filter="url(#Adobe_OpacityMaskFilter_5_)">
-                <path id="path-7_3_" class="st0"
-                  d="M128 6.8c14.4 1.6 25.4 6 25.4 17.5V24c20.5 8.7 34.9 29 34.9 52.7v7.1H29.6v-7.1C29.6 53 44 32.7 64.5 24c.2-11.3 11.2-15.6 25.4-17.2v15c0 10.5 8.5 19.1 19.1 19.1s19-8.6 19-19.1v-15z" />
-              </g>
-            </mask>
-            <path id="Straps"
-              d="M85.1 45.4v38.3h-5.6V42.5c1.8 1.1 3.7 2 5.6 2.9zm53.2-2.8v42.3c0 2-1.2 3.7-2.8 3.7s-2.8-1.6-2.8-3.7V46.4c2-1.2 3.9-2.5 5.6-3.8z"
-              mask="url(#mask-8_2_)" fill-rule="evenodd" clip-rule="evenodd" fill="#f4f4f4" />
-            <defs>
-              <filter id="Adobe_OpacityMaskFilter_6_" filterUnits="userSpaceOnUse" x="56.2" y="6.5" width="105.6"
-                height="43.9">
-                <feColorMatrix values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" />
-              </filter>
-            </defs>
-            <mask maskUnits="userSpaceOnUse" x="56.2" y="6.5" width="105.6" height="43.9" id="mask-8_3_">
-              <g filter="url(#Adobe_OpacityMaskFilter_6_)">
-                <path id="path-7_4_" class="st0"
-                  d="M128 6.8c14.4 1.6 25.4 6 25.4 17.5V24c20.5 8.7 34.9 29 34.9 52.7v7.1H29.6v-7.1C29.6 53 44 32.7 64.5 24c.2-11.3 11.2-15.6 25.4-17.2v15c0 10.5 8.5 19.1 19.1 19.1s19-8.6 19-19.1v-15z" />
-              </g>
-            </mask>
-            <path id="Shadow"
-              d="M141.5 6.5c12 2.3 20.2 6.8 20.2 15.5 0 15.6-26.2 28.3-52.8 28.3S56.2 37.7 56.2 22c0-8.8 8.3-13.3 20.2-15.5-7.2 2.7-11.9 7.1-11.9 14.6 0 16.2 22.1 29.3 44.5 29.3s44.5-13.1 44.5-29.3c0-7.3-4.5-11.7-11.4-14.4l-.6-.2z"
-              mask="url(#mask-8_3_)" fill-rule="evenodd" clip-rule="evenodd" fill-opacity=".16" />
-          </g>
-          <g id="Face" transform="translate(68.4 73.8)">
-            <g id="Mouth_x2F_Smile" transform="translate(1.8 46.8)">
-              <g id="Mouth">
-                <path id="path-9_1_"
-                  d="M23.3 10.2c.9 7.5 7.4 13.4 15.3 13.4 8 0 14.5-5.9 15.3-13.5.1-.6-.6-1.6-1.5-1.6H24.8c-.7 0-1.5.9-1.5 1.7z"
-                  fill-rule="evenodd" clip-rule="evenodd" fill-opacity=".7" />
-              </g>
-              <defs>
-                <filter id="Adobe_OpacityMaskFilter_7_" filterUnits="userSpaceOnUse" x="26.5" y="-.2" width="25.2"
-                  height="12.7">
-                  <feColorMatrix values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" />
-                </filter>
-              </defs>
-              <mask maskUnits="userSpaceOnUse" x="26.5" y="-.2" width="25.2" height="12.7" id="mask-10_1_">
-                <g filter="url(#Adobe_OpacityMaskFilter_7_)">
-                  <path id="path-9_2_" class="st0"
-                    d="M23.3 10.2c.9 7.5 7.4 13.4 15.3 13.4 8 0 14.5-5.9 15.3-13.5.1-.6-.6-1.6-1.5-1.6H24.8c-.7 0-1.5.9-1.5 1.7z" />
-                </g>
-              </mask>
-              <path id="Teeth"
-                d="M30.5-.2h17c2.2 0 4.1 1.8 4.1 4v4.8c0 2.2-1.8 4-4.1 4h-17c-2.2 0-4.1-1.8-4.1-4V3.7c.1-2.2 1.9-3.9 4.1-3.9z"
-                mask="url(#mask-10_1_)" fill-rule="evenodd" clip-rule="evenodd" fill="#fff" />
-              <defs>
-                <filter id="Adobe_OpacityMaskFilter_8_" filterUnits="userSpaceOnUse" x="25.7" y="17.2" width="26"
-                  height="17.5">
-                  <feColorMatrix values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" />
-                </filter>
-              </defs>
-              <mask maskUnits="userSpaceOnUse" x="25.7" y="17.2" width="26" height="17.5" id="mask-10_2_">
-                <g filter="url(#Adobe_OpacityMaskFilter_8_)">
-                  <path id="path-9_3_" class="st0"
-                    d="M23.3 10.2c.9 7.5 7.4 13.4 15.3 13.4 8 0 14.5-5.9 15.3-13.5.1-.6-.6-1.6-1.5-1.6H24.8c-.7 0-1.5.9-1.5 1.7z" />
-                </g>
-              </mask>
-              <g id="Tongue" mask="url(#mask-10_2_)">
-                <g transform="translate(34.2 21.6)">
-                  <ellipse class="st27" cx=".4" cy="4.4" rx="8.9" ry="8.7" />
-                  <ellipse class="st27" cx="8.5" cy="4.4" rx="8.9" ry="8.7" />
-                </g>
-              </g>
-            </g>
-            <g id="Nose_x2F_Default" transform="translate(25.2 36)">
-              <path id="Nose" d="M5.8 0c0 3.5 4.3 6.4 9.5 6.4 5.3 0 9.5-2.8 9.5-6.4" fill-rule="evenodd"
-                clip-rule="evenodd" fill-opacity=".16" />
-            </g>
-            <g id="Eyes_x2F_Happy-_xD83D__xDE01_" transform="translate(0 7.2)">
-              <path id="Squint" class="st29"
-                d="M8.9 19.4c1.5-3 4.8-5.1 8.6-5.1s7.1 2.1 8.6 5.1c.4.9-.2 1.6-.8 1.1-1.9-1.7-4.7-2.7-7.8-2.7-3 0-5.7 1-7.6 2.6-.7.5-1.4-.1-1-1z" />
-              <path id="Squint_1_" class="st29"
-                d="M55 19.4c1.5-3 4.8-5.1 8.6-5.1s7.1 2.1 8.6 5.1c.4.9-.2 1.6-.8 1.1-1.9-1.7-4.7-2.7-7.8-2.7-3 0-5.7 1-7.6 2.6-.7.5-1.4-.1-1-1z" />
-            </g>
-            <g id="Eyebrow_x2F_Natural_x2F_Default-Natural">
-              <path id="Eyebrow" class="st29"
-                d="M17.2 7.4c-4.6.2-12.1 3.6-11.9 8.2 0 .2.2.2.3.1 2.2-2.3 17.7-4.7 23.2-3.5.5.1.9-.4.6-.7-2.7-3.1-8.1-4.3-12.2-4.1" />
-              <path id="Eyebrow_1_" class="st29"
-                d="M64.7 7.4c4.6.2 12.1 3.6 11.9 8.2 0 .2-.2.2-.3.1-2.2-2.3-17.7-4.7-23.2-3.5-.5.1-.9-.4-.6-.7 2.7-3.1 8.1-4.3 12.2-4.1" />
-            </g>
-          </g>
-          <path
-            d="M72.8 150.3c6.5 1.9 7.9 9.4 17.9 13.6 11.2 5.5 9.2 7.3 18 8.5 8.8-1 8.3-3.9 19.9-9.4 9.8-3.9 10.2-10.5 16.8-11.8 10.9-19.4 8.2-42.8 8.3-63.4-1.8 4.1-.4 11.4-2.1 18.2-2.2 7.1-4.9 8.9-5.1 14.9-6.7 16.3-26.4-8.6-37.8-1.9-12.5-6.7-36.2 22-38.5-2.9-6.7-9.2-3.9-25.1-5.4-34.5-.6 18.7-4.6 46.2 3.7 64.5m40.7-2.1c-8.7.6-12.8-7.4-15-13 9.4-3.3 20.6-2.2 30-.2-1.9 6.7-4.9 12.6-15 13.2z"
-            fill="#4a312c" />
-        </svg>
-      </div>
-    </div>
-    <div class="flex-row  mx-auto w-1/2 wow fadeInRight">
-      <img class="md:hidden" src="/Images/Avatar-Dani-02-01.svg" alt="Daniel Sanabria" />
-    </div>
-    <div>
-  </section>
-
-  <section id="proyectos" class="zone bg-white py-6 mx-auto">
-
-    <div class="container mx-auto flex items-center flex-wrap pt-4 pb-12">
-
-      <nav class="w-full z-30 top-0 px-6 py-1">
-        <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-3">
-
-          <a class=" tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-3xl " href="#">
-            Proyectos
-          </a>
         </div>
-      </nav>
+        <div class="px-6 py-6 ">
+          <a href="#eurofins"><img class="mx-auto hover:grow hover:shadow-lg rounded" src="/Images/logo-Eurofins.png">
+         <p class="px-2 py-4 m-0 text-center sm:text-left font-bold text-gray-800 text-xl">Eurofins</p></a>
 
-      <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col wow fadeIn" data-wow-delay="0.3s">
-        <a href="#gardenweb">
-          <img class="hover:grow hover:shadow-lg rounded" src="/Images/logo-garden-web.png">
-          <div class="pt-3 flex items-center justify-between">
-            <p class="font-bold text-gray-800">Gardenweb</p>
-          </div>
-        </a>
-      </div>
+        </div>
+        <div class="px-6 py-6 ">
+          <a href="#fibra-de-bambu"><img class="mx-auto hover:grow hover:shadow-lg rounded" src="/Images/logo-fibra-de-bambu-web-personal.png">
+          <p class="px-2 py-4 m-0 text-center sm:text-left font-bold text-gray-800 text-xl">Fibra de Bambú</p></a>
 
-      <div class="wow fadeIn w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col wow fadeIn" data-wow-delay="0.3s">
-        <a href="#jardisan">
-          <img class="hover:grow hover:shadow-lg rounded" src="/Images/logo-jardisan.png">
-          <div class="pt-3 flex items-center justify-between">
-            <p class="font-bold text-gray-800">Jardisán</p>
-          </div>
-        </a>
-      </div>
-
-      <div class="wow fadeIn w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col wow fadeIn" data-wow-delay="0.3s">
-        <a href="#eurofins">
-          <img class="hover:grow hover:shadow-lg rounded" src="Images/logo-Eurofins.png">
-          <div class="pt-3 flex items-center justify-between">
-            <p class="font-bold text-gray-800">Eurofins</p>
-          </div>
-        </a>
-      </div>
-
-      <div class="wow fadeIn w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col wow fadeIn" data-wow-delay="0.3s">
-        <a href="#fibra-de-bambu">
-          <img class="hover:grow hover:shadow-lg rounded " src="/Images/logo-fibra-de-bambu-web-personal.png">
-          <div class="pt-3 flex items-center justify-between">
-            <p class="font-bold text-gray-800">Fibra de bambú</p>
-          </div>
-        </a>
+        </div>
       </div>
     </div>
   </section>
-  <div id="sobre-mi" class="w-full px-2 bg-yellow-500 wow">
-    <div class="px-4 pt-6 text-3xl text-gray-800 font-bold">Sobre mi</div>
-    <div class="px-4 py-4 text-xl text-gray-800">En este apartado puedes conocerme un poco mejor, saber lo que me gusta
+  <!--Sección Sobre mi-->
+  <div id="sobre-mi" class="w-full px-2 bg-yellow-500 wow xl:px-64">
+    <div class="px-4 pt-6 text-4xl text-gray-800 font-bold xl:px-0">Sobre mi</div>
+    <div class="px-4 py-4 text-xl text-gray-800 xl:px-0">En este apartado puedes conocerme un poco mejor, saber lo que
+      me gusta
       y en que puedo ayudarte en tu negocio online.
       Si tienes cualquier duda, siempre puedes contactar conmigo en el formulario que encontrarás más abajo.
     </div>
     <div class="flex justify-center flex-wrap p-10 ">
-      <div class="relative w-48 h-64 m-5 bg-white shadow-lg wow slideInLeft"  data-wow-delay="0.1s">
+      <div class="relative w-48 h-64 m-5 bg-white shadow-lg wow slideInLeft" data-wow-delay="0.1s">
         <div class="flex items-center w-48 h-20 bg-blue-900">
           <img class="w-1/3 mx-auto" src="/Images/interfaz.svg" alt="ecommerce">
         </div>
@@ -373,7 +136,7 @@
         <p class="p-2 text-sm text-gray-700">El usuario es lo más importante y facilitar el uso de tu web o
           aplicación es primordial a la hora de afrontar cualquier proyecto.</p>
       </div>
-      <div class="relative w-48 h-64 m-5 bg-white shadow-lg wow slideInRight"  data-wow-delay="0.1s">
+      <div class="relative w-48 h-64 m-5 bg-white shadow-lg wow slideInRight" data-wow-delay="0.1s">
         <div class="flex items-center w-48 h-20 bg-blue-500">
           <img class="w-1/3 mx-auto" src="/Images/carro.svg" alt="ecommerce">
         </div>
@@ -384,81 +147,94 @@
     </div>
 
   </div>
-  <div class="mt-8 mb-8">
-    <div id="gardenweb" class="bg-blue-500 text-white font-bold text-4xl md:w-1/3 py-4 pl-4 shadow-md wow slideInLeft">
-      Gardenweb
-    </div>
-    <div class="md:flex md:inline-flex wow slideInLeft">
-      <div class="flex py-4 px-4 md:w-1/3">
-        Estuve involucrado en este proyecto de 2015 a 2018.
-        <br> En estos 3 años hicimos crecer la web constantemente. Aumentamos el carrito medio, hice todas las
-        fotografías de
-        los productos y esto nos permitió vender más y sobretodo conseguir muchas menos devoluciones.
-        <br> Aumentaron los clientes y también la recurrencia de los mismos. Automatizamos el envío de emails y esto nos
-        permitió ser mucho más eficientes.
+  <!--Descripción de las -->
+  <div class="xl:px-64">
+    <div class="mt-8 mb-8">
+      <div id="gardenweb"
+        class="bg-blue-500 text-white font-bold text-4xl md:w-1/3 py-4 pl-4 shadow-md wow slideInLeft">
+        Gardenweb
+      </div>
+      <div class="md:flex md:inline-flex wow slideInLeft">
+        <div class="flex py-4 px-4 md:w-1/3">
+          Estuve involucrado en este proyecto de 2015 a 2018.
+          <br> En estos 3 años hicimos crecer la web constantemente. Aumentamos el carrito medio, hice todas las
+          fotografías de
+          los productos y esto nos permitió vender más y sobretodo conseguir muchas menos devoluciones.
+          <br> Aumentaron los clientes y también la recurrencia de los mismos. Automatizamos el envío de emails y esto
+          nos
+          permitió ser mucho más eficientes.
         </div>
         <div class="block font-bold">
-      </div>
-      <div class="block py-4 px-4 md:w-2/3 wow fadeIn" data-wow-delay="1s">
-        <img src="/Images/gardenweb.jpg" alt="">
+        </div>
+        <div class="block py-4 px-4 md:w-2/3 wow fadeIn" data-wow-delay="1s">
+          <img src="/Images/gardenweb.jpg" alt="">
+        </div>
       </div>
     </div>
-  </div>
-  <div class="mt-8 mb-8">
-    <div id="jardisan" class="bg-yellow-500 text-white font-bold text-4xl md:w-1/3 py-4 pl-4 shadow-md wow slideInLeft">
-      Jardisan
-    </div>
-    <div class="md:flex md:inline-flex wow slideInLeft">
-      <div class="flex py-4 px-4 md:w-1/3">
-        Rediseño de la imagen corporativa de la empresa. He creado las últimas dos versiones de la página web.
-        <br> Creación de código HTML y CSS mediante el framework Tailwind CSS.
-        Que agiliza la creación del CSS permitiendo maquetar de forma más sencilla.
-        <br> Ha sido un proyecto, sencillo pero que cumple con las necesidades del cliente. Mostrando sus servicios y
-        fotografías de trabajos realizados durante su experiencia.
+    <div class="mt-8 mb-8">
+      <div id="jardisan"
+        class="bg-yellow-500 text-white font-bold text-4xl md:w-1/3 py-4 pl-4 shadow-md wow slideInLeft">
+        Jardisan
+      </div>
+      <div class="md:flex md:inline-flex wow slideInLeft">
+        <div class="flex py-4 px-4 md:w-1/3">
+          Rediseño de la imagen corporativa de la empresa. He creado las últimas dos versiones de la página web.
+          <br> Creación de código HTML y CSS mediante el framework Tailwind CSS.
+          Que agiliza la creación del CSS permitiendo maquetar de forma más sencilla.
+          <br> Ha sido un proyecto, sencillo pero que cumple con las necesidades del cliente. Mostrando sus servicios y
+          fotografías de trabajos realizados durante su experiencia.
 
+        </div>
+        <div class="block py-4 px-4 md:w-2/3 wow fadeIn" data-wow-delay="1s">
+          <img src="/Images/jardisan.jpg" alt="">
+        </div>
       </div>
-      <div class="block py-4 px-4 md:w-2/3 wow fadeIn" data-wow-delay="1s">
-        <img src="/Images/jardisan.jpg" alt="">
+    </div>
+    <div class="mt-8 mb-8">
+      <div id="eurofins" class="bg-blue-500 text-white font-bold text-4xl md:w-1/3 py-4 pl-4 shadow-md wow slideInLeft">
+        Eurofins
+      </div>
+      <div class="md:flex md:inline-flex wow slideInLeft">
+        <div class="flex py-4 px-4 md:w-1/3">
+          Encargado de la maquetación del contenido de los diferentes sitios web del la división de productos para el
+          consumo.
+          <br> Creación de campañas de email marketing gestionando los contendios y su difusión en redes sociales.
+          <br>Mantenimiento de la identidad coporativa en los diferentes elementos graficos creados.
+          <br> Creación de los diferentes elementos gráficos para las ferias y los eventos de los laboratorios
+          repartidos por todo el mundo.
+        </div>
+        <div class="block py-4 px-4 md:w-2/3 wow fadeIn" data-wow-delay="1s">
+          <img src="/Images/eurofins.webp" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="mt-8 mb-8">
+      <div id="fibra-de-bambu"
+        class="bg-yellow-500 text-white font-bold text-4xl md:w-1/3 py-4 pl-4 shadow-md wow slideInLeft">
+        Fibra de bambú
+      </div>
+      <div class="md:flex md:inline-flex wow slideInLeft">
+        <div class="flex py-4 px-4 md:w-1/3">
+          Un "side project" con el que he podido adentrarme en el mundo de Wordpress y Woocommerce. Atacando un nicho
+          como eran
+          los productos de fibra de bambú.
+          <br>Fue una muy buena experiencia para poner en práctica los conocimientos adquiridos durante los años, de
+          posicionamiento SEO y optimización de los contenidos.
+          <br>
+          Al final como mejor se aprende es haciendo y este proyecto me ha hecho descubrir en profundidad el diseño web.
+        </div>
+        <div class="block py-4 px-4 md:w-2/3 wow fadeIn" data-wow-delay="1s">
+          <img src="/Images/fibra-de-bambu.jpg" alt="">
+        </div>
       </div>
     </div>
   </div>
-  <div class="mt-8 mb-8">
-    <div id="eurofins" class="bg-blue-500 text-white font-bold text-4xl md:w-1/3 py-4 pl-4 shadow-md wow slideInLeft">
-      Eurofins
-    </div>
-    <div class="md:flex md:inline-flex wow slideInLeft">
-      <div class="flex py-4 px-4 md:w-1/3">
-        Encargado de la maquetación del contenido de los diferentes sitios web del la división de productos para el consumo. 
-        <br> Creación de campañas de email marketing gestionando los contendios y su difusión en redes sociales.
-        <br>Mantenimiento de la identidad coporativa en los diferentes elementos graficos creados.
-        <br> Creación de los diferentes elementos gráficos para las ferias y los eventos de los laboratorios repartidos por todo el mundo.
-      </div>
-      <div class="block py-4 px-4 md:w-2/3 wow fadeIn" data-wow-delay="1s">
-        <img src="/Images/eurofins.webp" alt="">
-      </div>
-    </div>
-  </div>
-  <div class="mt-8 mb-8">
-    <div id="fibra-de-bambu" class="bg-yellow-500 text-white font-bold text-4xl md:w-1/3 py-4 pl-4 shadow-md wow slideInLeft">
-      Fibra de bambú
-    </div>
-    <div class="md:flex md:inline-flex wow slideInLeft">
-      <div class="flex py-4 px-4 md:w-1/3">
-        Un "side project" con el que he podido adentrarme en el mundo de Wordpress y Woocommerce. Atacando un nicho como eran
-        los productos de fibra de bambú.
-        <br>Fue una muy buena experiencia para poner en práctica los conocimientos adquiridos durante los años, de
-        posicionamiento SEO y optimización de los contenidos.
-        <br>
-        Al final como mejor se aprende es haciendo y este proyecto me ha hecho descubrir en profundidad el diseño web.
-      </div>
-      <div class="block py-4 px-4 md:w-2/3 wow fadeIn" data-wow-delay="1s">
-        <img src="/Images/fibra-de-bambu.jpg" alt="">
-      </div>
-    </div>
-  </div>
-  <div class="bg-blue-500">
+
+  <div class="bg-blue-500 xl:px-64">
     <div class="px-4 pt-6 text-3xl text-white font-bold">Fotografía</div>
-    <div class="px-4 py-4 text-xl text-white">Junto con el mundo del diseño web y muy relacionado con este, me encanta la fotografía, la cámara me ha acompañado en todos mis viajes. Me ha permitido experimentar y descubrir rincones preciosos de este mundo.
+    <div class="px-4 py-4 text-xl text-white">Junto con el mundo del diseño web y muy relacionado con este, me encanta
+      la fotografía, la cámara me ha acompañado en todos mis viajes. Me ha permitido experimentar y descubrir rincones
+      preciosos de este mundo.
     </div>
     <div class="pt-10 px-4 flex flex-auto ">
       <div class="flex pr-2 w-2/3 flex-auto wow slideInLeft">
@@ -468,7 +244,7 @@
         <img src="/Images/Fotografia/fotografia-9.jpg" alt="">
       </div>
     </div>
-      <div class="py-2 px-4 flex flex-auto">
+    <div class="py-2 px-4 flex flex-auto">
       <div class="flex pr-2  w-3/4 wow slideInLeft">
         <img src="/Images/Fotografia/fotografia-8.jpg" alt="">
       </div>
@@ -483,14 +259,15 @@
       <div class="flex pr-2 w-3/4 wow slideInRight">
         <img src="/Images/Fotografia/fotografia-7.jpg" alt="">
       </div>
-  </div>
+    </div>
   </div>
   <div id="contacto" class="mt-8 mb-8">
-    <div id="jardisan" class="bg-gray-800 text-white font-bold text-4xl md:w-full py-4 pl-4 shadow-md text-center wow fadeIn">
+    <div id="jardisan"
+      class="bg-gray-800 text-white font-bold text-4xl md:w-full py-4 pl-4 shadow-md text-center wow fadeIn">
       Contacto
     </div>
   </div>
-  <div  class="mx-auto">
+  <div class="mx-auto">
     <script type="text/javascript">var submitted = false;</script>
     <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
       onload="if(submitted)  {window.location='#';}"></iframe>
@@ -542,53 +319,54 @@
         </div>
       </div>
       <button>
-      <div class="md:flex md:items-center">
-        <div class="md:w-1/3">
+        <div class="md:flex md:items-center">
+          <div class="md:w-1/3">
             <input
-            class="shadow bg-yellow-500 hover:bg-blue-500 focus:shadow-outline focus:outline-none text-gray-800 hover:text-white font-bold py-2 px-4 rounded-sm "
-            type="submit" value="Enviar" />
-        </div>
+              class="shadow bg-yellow-500 hover:bg-blue-500 focus:shadow-outline focus:outline-none text-gray-800 hover:text-white font-bold py-2 px-4 rounded-sm "
+              type="submit" value="Enviar" />
+          </div>
       </button>
-        <div class="md:w-2/3"></div>
-      </div>
-    </form>
-
-    <footer class="flex bg-blue-500 p-6 justify-around mx-auto wow fadeIn">
-
-      <div class="flex-row px-4">
-        <a href="https://www.linkedin.com/in/danielsa55/"><img href class="py-2 mx-auto w-6" src="/Images/linkedin.svg"
-            alt=""></a>
-        <a class="text-white hover:text-gray-800 font-semibold"
-          href="https://www.linkedin.com/in/danielsa55/">Linkedin</a>
-      </div>
-      <div class="flex-row px-4">
-        <a href="https://www.instagram.com/danielsa55/"><img class="py-2 w-6 mx-auto" src="/Images/instagram.svg"
-            alt=""></a>
-        <a class="text-white hover:text-gray-800 font-semibold"
-          href="https://www.instagram.com/danielsa55/">Instagram</a>
-
-      </div>
-      <div class="flex-row px-4">
-        <a class="" href="mailto:danielsanabriaalbert@gmail.com?Subject=Contacto%20del%20portfolio"><img
-            class="py-2 w-6 mx-auto" fill="white" src="/Images/mail.svg" alt=""></a>
-        <a class="text-white hover:text-gray-800 font-semibold"
-          href="mailto:danielsanabriaalbert@gmail.com?Subject=Contacto%20del%20portfolio">Mail</a>
-      </div>
-      <div class="flex-row px-4">
-        <a href="https://codepen.io/danielsanabria"><img class="py-2 w-6 mx-auto" src="/Images/codepen.svg" alt=""></a>
-        <a class="text-white hover:text-gray-800 font-semibold" href="https://codepen.io/danielsanabria">Codepen</a>
-      </div>
+      <div class="md:w-2/3"></div>
   </div>
   </form>
 
-  </div>
+  <footer class="flex bg-blue-500 p-6 justify-around mx-auto wow fadeIn">
+
+    <div class="flex-row px-4">
+      <a href="https://www.linkedin.com/in/danielsa55/"><img href class="py-2 mx-auto w-6" src="/Images/linkedin.svg"
+          alt=""></a>
+      <a class="text-white hover:text-gray-800 font-semibold"
+        href="https://www.linkedin.com/in/danielsa55/">Linkedin</a>
+    </div>
+    <div class="flex-row px-4">
+      <a href="https://www.instagram.com/danielsa55/"><img class="py-2 w-6 mx-auto" src="/Images/instagram.svg"
+          alt=""></a>
+      <a class="text-white hover:text-gray-800 font-semibold" href="https://www.instagram.com/danielsa55/">Instagram</a>
+
+    </div>
+    <div class="flex-row px-4">
+      <a class="" href="mailto:danielsanabriaalbert@gmail.com?Subject=Contacto%20del%20portfolio"><img
+          class="py-2 w-6 mx-auto" fill="white" src="/Images/mail.svg" alt=""></a>
+      <a class="text-white hover:text-gray-800 font-semibold"
+        href="mailto:danielsanabriaalbert@gmail.com?Subject=Contacto%20del%20portfolio">Mail</a>
+    </div>
+    <div class="flex-row px-4">
+      <a href="https://codepen.io/danielsanabria"><img class="py-2 w-6 mx-auto" src="/Images/codepen.svg" alt=""></a>
+      <a class="text-white hover:text-gray-800 font-semibold" href="https://codepen.io/danielsanabria">Codepen</a>
+    </div>
+    </div>
+    </form>
+    </div>
   </footer>
   <div class="flex bg-blue-500 p-6 justify-around mx-auto py-4 text-white wow fadeIn">
     2020© Daniel Sanabria, mi espacio personal donde te iré enseñando lo que voy haciendo.
   </div>
 </body>
 <script src="js/wow.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.6/lottie.min.js" type="text/javascript"></script>
+<script src="js/useAnimation.js"></script>
 <script>
-new WOW().init();
+  new WOW().init();
 </script>
+
 </html>
