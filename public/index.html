@@ -23,11 +23,12 @@
     <nav class="flex justify-between py-4">
       <ul class="flex">
         <li class="text-2xl font-bold text-gray-800"><a href="#">Daniel Sanabria</a></li>
+        <li></li>
       </ul>
       <div class="relative" x-data="{ isOpen: false }" @click.away="isOpen = false">
-        <button @click="isOpen = !isOpen" class="flex items-center focus:outline-none" @keydown.escape="isOpen = false">
-          <div id="menuButton" class="bodymovinanim py-2 pr-2"></div>
-        </button>
+        <div @click="isOpen = !isOpen" class="flex items-center focus:outline-none" >
+          <img src="images/menu.svg" class="w-6" alt="">
+        </div>
         <ul x-show="isOpen" @click.away="isOpen = false"
           class="absolute font-normal bg-gray-100 shadow overflow-hidden rounded-sm w-48  mt-2 py-1 right-0 z-10">
           <li class="text-gray-800">
@@ -62,7 +63,7 @@
         Si quieres saber más de mi..
       </h3>
       <h3 class="text-white text-xl text-left md:text-left opacity-50">
-        Soy UI/ UX & Front end Developer
+        Soy diseñador UI / UX 
       </h4>
       <div class="text-left">
       <button class="py-8 mx-auto">
