@@ -4,6 +4,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="Daniel Sanabria Diseñador UI/UX"/>
+<meta property="og:description" content="Este es mi portfolio personal con proyectos de diseño web y diseño gráfico que he ido realizando durante mi carrera profesional"/>
+<meta property="og:url" content="https://wwww.danielsanabria.es"/>
+<meta property="og:site_name" content="Daniel Sanabria"/>
+<meta property="og:image" content="https://www.danielsanabria.es/Images/banner-img-og.jpg"/>
   <link rel="stylesheet" href="/build/tailwind.css" />
   <link rel="stylesheet" href="/build/custom-utilities.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
@@ -14,7 +19,8 @@
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v1.9.8/dist/alpine.js" defer></script>
 
 
-  <title>Daniel Sanabria | UI Designer & Desarrollador Front-End</title>
+
+  <title>Daniel Sanabria | UI / UX Designer</title>
 </head>
 
 <body class="w-full">
@@ -27,7 +33,7 @@
       </ul>
       <div class="relative" x-data="{ isOpen: false }" @click.away="isOpen = false">
         <div @click="isOpen = !isOpen" class="flex items-center focus:outline-none" >
-          <img src="Images/menu.svg" class="w-6" alt="">
+          <img class="menu" src="Images/menu.svg" class="w-6" alt="">
         </div>
         <ul x-show="isOpen" @click.away="isOpen = false"
           class="absolute font-normal bg-gray-100 shadow overflow-hidden rounded-sm w-48  mt-2 py-1 right-0 z-10">

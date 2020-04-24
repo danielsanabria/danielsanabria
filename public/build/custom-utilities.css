@@ -1,20 +1,22 @@
 .hover\:grow {
-    transition: all 0.3s;
-    transform: scale(1);
+  transition: all 0.3s;
+  transform: scale(1);
 }
 
 .hover\:grow:hover {
-    transform: scale(1.02);
+  transform: scale(1.02);
 }
-
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 .bodymovinanim {
-    width: 100%;
-    max-width: 60px;
-    cursor: pointer;
-    stroke: #373F51;
-  }
+  width: 100%;
+  max-width: 60px;
+  cursor: pointer;
+  stroke: #373f51;
+}
 
+.menu {
+  cursor: pointer;
+}
